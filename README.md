@@ -64,6 +64,24 @@ python bili2text_cli.py "https://www.bilibili.com/video/BV1fj6GBhEP5" --model sm
 
 ---
 
+## ❓ 常见问题 (FAQ)
+
+### 1. 为什么默认不建议使用 `large-v3` 模型？
+虽然 `large-v3` 识别率最高，但其参数量巨大（约 1.5GB），在没有高端显卡的普通电脑（如 Mac Air 或办公本）上运行会占用极高资源，导致系统严重卡顿甚至崩溃。
+**Bili2Text-Turbo** 的核心理念是：**让本地干脏活（提取），让云端干细活（纠错）**。使用 `small` 模型配合 `DeepSeek-V3` 纠错，识别准确率完全不输甚至超越 `large-v3` 直接输出的结果，且运行极其流畅。
+
+### 2. DeepSeek API Key 贵吗？
+**极其便宜！**
+DeepSeek-V3 是目前公认的性价比之王。处理一个 10 分钟视频的文字纠错，消耗的 Token 成本通常不到 **0.01 元人民币**（一分钱都不到）。新用户注册通常还会获赠 1000 万左右的免费 Token，基本等于白嫖。
+
+### 3. 支持哪些视频格式？
+由于底层使用了 `yt-dlp` 和 `moviepy`，本项目支持 B 站几乎所有的视频格式，包括 `.mp4`, `.webm`, `.flv`, `.mkv` 等。
+
+### 4. 我可以在其他平台（如 Windows）运行吗？
+当然可以！只要安装了 Python 3.9+ 和 FFmpeg，该工具即可在 Windows, macOS, Linux 上完美运行。
+
+---
+
 ## 🤝 致谢
 
 本项是在 [lanbinleo/bili2text](https://github.com/lanbinleo/bili2text) 的基础上进行的深度优化与功能重构。感谢原作者提供的出色基础！
