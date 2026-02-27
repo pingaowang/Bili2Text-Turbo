@@ -1,5 +1,7 @@
 # 🚀 Bili2Text-Turbo
 
+聚焦：B站视频转文字. bilibili视频转文字.AI.大模型.
+
 > **本地轻量提取 + 云端 AI 智能精修：B 站视频转文字的最优解。**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
