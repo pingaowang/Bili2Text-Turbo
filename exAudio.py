@@ -25,7 +25,7 @@ def convert_flv_to_mp3(name, target_name=None, folder='bilibili_video'):
         dir_path = f'{folder}/{name}'
         if os.path.isdir(dir_path):
             for file in os.listdir(dir_path):
-                if file.endswith(('.mp4', '.flv', '.mkv', '.avi')):
+                if file.endswith(('.mp4', '.flv', '.mkv', '.avi', '.webm')):
                     input_path = os.path.join(dir_path, file)
                     break
             else:
